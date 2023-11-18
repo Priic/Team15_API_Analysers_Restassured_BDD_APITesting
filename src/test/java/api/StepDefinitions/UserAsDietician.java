@@ -15,7 +15,7 @@ public class UserAsDietician extends restUtils{
 	    
 		String baseUrl = path.getString("BaseUrl");// assigning baseurl value stored in string
 		baseURI = baseUrl;
-		
+		//code for authorization
 		log.info("***User sends request with BaseURL***");
 	}
 
