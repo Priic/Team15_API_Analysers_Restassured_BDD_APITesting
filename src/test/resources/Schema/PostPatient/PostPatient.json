@@ -1,0 +1,295 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1700554981.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"Allergy",
+		"ContactNumber",
+		"DateOfBirth",
+		"DieticianId",
+		"Email",
+		"FileMorbidity",
+		"FileMorbidityCondition",
+		"FirstName",
+		"FoodCategory",
+		"LastName",
+		"patientId"
+	],
+	"properties": {
+		"Allergy": {
+			"$id": "#root/Allergy", 
+			"title": "Allergy", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"string"
+			],
+			"pattern": "^.*$"
+		},
+		"ContactNumber": {
+			"$id": "#root/ContactNumber", 
+			"title": "Contactnumber", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"string"
+			],
+			"pattern": "^.*$"
+		},
+		"DateOfBirth": {
+			"$id": "#root/DateOfBirth", 
+			"title": "Dateofbirth", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"2023-11-21T08:20:41.661Z"
+			],
+			"pattern": "^.*$"
+		},
+		"DieticianId": {
+			"$id": "#root/DieticianId", 
+			"title": "Dieticianid", 
+			"type": "integer",
+			"examples": [
+				0
+			],
+			"default": 0
+		},
+		"Email": {
+			"$id": "#root/Email", 
+			"title": "Email", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"string"
+			],
+			"pattern": "^.*$"
+		},
+		"FileMorbidity": {
+			"$id": "#root/FileMorbidity", 
+			"title": "Filemorbidity", 
+			"type": "object",
+			"required": [
+				"additionalProp1",
+				"additionalProp2",
+				"additionalProp3"
+			],
+			"properties": {
+				"additionalProp1": {
+					"$id": "#root/FileMorbidity/additionalProp1", 
+					"title": "Additionalprop1", 
+					"type": "object",
+					"required": [
+						"additionalProp1",
+						"additionalProp2",
+						"additionalProp3"
+					],
+					"properties": {
+						"additionalProp1": {
+							"$id": "#root/FileMorbidity/additionalProp1/additionalProp1", 
+							"title": "Additionalprop1", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								"string"
+							],
+							"pattern": "^.*$"
+						},
+						"additionalProp2": {
+							"$id": "#root/FileMorbidity/additionalProp1/additionalProp2", 
+							"title": "Additionalprop2", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								"string"
+							],
+							"pattern": "^.*$"
+						},
+						"additionalProp3": {
+							"$id": "#root/FileMorbidity/additionalProp1/additionalProp3", 
+							"title": "Additionalprop3", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								"string"
+							],
+							"pattern": "^.*$"
+						}
+					}
+				}
+,
+				"additionalProp2": {
+					"$id": "#root/FileMorbidity/additionalProp2", 
+					"title": "Additionalprop2", 
+					"type": "object",
+					"required": [
+						"additionalProp1",
+						"additionalProp2",
+						"additionalProp3"
+					],
+					"properties": {
+						"additionalProp1": {
+							"$id": "#root/FileMorbidity/additionalProp2/additionalProp1", 
+							"title": "Additionalprop1", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								"string"
+							],
+							"pattern": "^.*$"
+						},
+						"additionalProp2": {
+							"$id": "#root/FileMorbidity/additionalProp2/additionalProp2", 
+							"title": "Additionalprop2", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								"string"
+							],
+							"pattern": "^.*$"
+						},
+						"additionalProp3": {
+							"$id": "#root/FileMorbidity/additionalProp2/additionalProp3", 
+							"title": "Additionalprop3", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								"string"
+							],
+							"pattern": "^.*$"
+						}
+					}
+				}
+,
+				"additionalProp3": {
+					"$id": "#root/FileMorbidity/additionalProp3", 
+					"title": "Additionalprop3", 
+					"type": "object",
+					"required": [
+						"additionalProp1",
+						"additionalProp2",
+						"additionalProp3"
+					],
+					"properties": {
+						"additionalProp1": {
+							"$id": "#root/FileMorbidity/additionalProp3/additionalProp1", 
+							"title": "Additionalprop1", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								"string"
+							],
+							"pattern": "^.*$"
+						},
+						"additionalProp2": {
+							"$id": "#root/FileMorbidity/additionalProp3/additionalProp2", 
+							"title": "Additionalprop2", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								"string"
+							],
+							"pattern": "^.*$"
+						},
+						"additionalProp3": {
+							"$id": "#root/FileMorbidity/additionalProp3/additionalProp3", 
+							"title": "Additionalprop3", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								"string"
+							],
+							"pattern": "^.*$"
+						}
+					}
+				}
+
+			}
+		}
+,
+		"FileMorbidityCondition": {
+			"$id": "#root/FileMorbidityCondition", 
+			"title": "Filemorbiditycondition", 
+			"type": "object",
+			"required": [
+				"additionalProp1",
+				"additionalProp2",
+				"additionalProp3"
+			],
+			"properties": {
+				"additionalProp1": {
+					"$id": "#root/FileMorbidityCondition/additionalProp1", 
+					"title": "Additionalprop1", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						"string"
+					],
+					"pattern": "^.*$"
+				},
+				"additionalProp2": {
+					"$id": "#root/FileMorbidityCondition/additionalProp2", 
+					"title": "Additionalprop2", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						"string"
+					],
+					"pattern": "^.*$"
+				},
+				"additionalProp3": {
+					"$id": "#root/FileMorbidityCondition/additionalProp3", 
+					"title": "Additionalprop3", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						"string"
+					],
+					"pattern": "^.*$"
+				}
+			}
+		}
+,
+		"FirstName": {
+			"$id": "#root/FirstName", 
+			"title": "Firstname", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"string"
+			],
+			"pattern": "^.*$"
+		},
+		"FoodCategory": {
+			"$id": "#root/FoodCategory", 
+			"title": "Foodcategory", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"string"
+			],
+			"pattern": "^.*$"
+		},
+		"LastName": {
+			"$id": "#root/LastName", 
+			"title": "Lastname", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"string"
+			],
+			"pattern": "^.*$"
+		},
+		"patientId": {
+			"$id": "#root/patientId", 
+			"title": "Patientid", 
+			"type": "integer",
+			"examples": [
+				0
+			],
+			"default": 0
+		}
+	}
+}

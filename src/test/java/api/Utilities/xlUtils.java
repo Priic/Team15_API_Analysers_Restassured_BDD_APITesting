@@ -25,8 +25,17 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 		public CellStyle style;   
 		String path;
 		public File jsonFile;
+		public File inputfile;
 		
 		
+		public File getFiles(String filePath) {
+			
+			inputfile=new File(filePath);
+			
+			return inputfile;
+			
+			
+		}
 
 		public xlUtils(String path)
 		{

@@ -1,0 +1,1 @@
+{"uuid":"2ca68676-d77c-4d0a-9983-4038b859ac0e","name":"Scenario: User with Dietician role and valid credentials after logout should not be able to view all patient test reports by patientID","children":["42b4eda4-3769-4e98-aa74-d3964d184734"],"befores":[],"afters":[],"start":1700577793975,"stop":1700577794702}

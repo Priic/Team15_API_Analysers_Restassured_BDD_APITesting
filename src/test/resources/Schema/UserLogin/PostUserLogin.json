@@ -1,0 +1,23 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1700345887.json", 
+	"title": "Root", 
+	"type": "object",
+	"properties": {
+		"password": {
+			"$id": "#root/password", 
+			"title": "Password", 
+			"type": "string",
+			"default": "",
+			"pattern": "^.*$"
+		},
+		"userLoginEmail": {
+			"$id": "#root/userLoginEmail", 
+			"title": "Userloginemail", 
+			"type": "string",
+			"default": "",
+			"pattern": "^.*$"
+		}
+	}
+}
