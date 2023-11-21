@@ -27,7 +27,7 @@ public class restUtils {
 		public static ResourceBundle path=ResourceBundle.getBundle("paths"); //creating object and accessing the path properties file
 		public static Logger log = LogManager.getLogger();
 		
-		public static xlUtils xlUtils=new xlUtils(".\\src\\test\\resources\\Testdata\\Testdata_steffi.xlsx");		
+			
 		//public static String url= path.getString("BaseUrl");
 		
 		public static RequestSpecification reqSpecBuilder ;
