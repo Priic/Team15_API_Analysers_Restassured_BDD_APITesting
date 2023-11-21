@@ -5,6 +5,9 @@ import api.Utilities.restUtils;
 public class UserLoginPayload extends restUtils {
 	
 	private String userLoginEmail;
+	private String password;
+	
+	
 	public String getUserLoginEmail() {
 		return userLoginEmail;
 	}
@@ -17,7 +20,7 @@ public class UserLoginPayload extends restUtils {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	private String password;
+	
 	
 	
 }

@@ -1,0 +1,1 @@
+{"uuid":"3e08653e-c067-4c6b-81c2-cae525b19672","name":"Scenario: User with Dietician role and valid credentials is able to create new patients","children":["355b09d0-efac-4bcf-a019-33361770ba5f"],"befores":[],"afters":[],"start":1700559549811,"stop":1700559550160}

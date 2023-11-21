@@ -17,4 +17,12 @@ public class UserLoginRequestBody extends restUtils{
 		
 	}
 
+public static UserLoginPayload UserLoginPatientPostBody() throws IOException {
+		
+		userLoginPayload.setUserLoginEmail(xlUtils.getCellData("AllPatientsLogins", 1, 0));
+		userLoginPayload.setPassword(xlUtils.getCellData("AllPatientsLogins", 1, 1));
+		
+		return userLoginPayload;
+		
+	}
 }

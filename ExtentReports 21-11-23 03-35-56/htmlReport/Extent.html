@@ -1,0 +1,2634 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link href='http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title></title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+			
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow bdd-report'>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+        <a href="#!" class="brand-logo black"><img src="http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+			<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'></span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Nov 21, 2023 03:35:56 AM</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>@GetRequest_GETPatient_MorbidityDetails_ByPatientID</a></li>
+					<li><a href='#'>@GetRequest_GETLogoutPatient</a></li>
+					<li><a href='#'>@GetRequest_GETLogoutDietician</a></li>
+					<li><a href='#'>@GetRequest_GetAllPatient</a></li>
+					<li><a href='#'>@PostRequest_CreateNewPatient2</a></li>
+					<li><a href='#'>@GetRequest_GETPatient_MorbidityDetails_ByPatientID_PatientRole</a></li>
+					<li><a href='#'>@GetRequest_GETMorbidity_ByTestName_PatientRole</a></li>
+					<li><a href='#'>@GetRequest_GETMorbidity_ByTestName</a></li>
+					<li><a href='#'>@PostRequest_CreateTokenForValidPatient</a></li>
+					<li><a href='#'>@PostRequest_CreateNewPatient</a></li>
+					<li><a href='#'>@GetRequest_GETAllMorbidity_PatientRole</a></li>
+					<li><a href='#'>@GetRequest_GETAllMorbidity</a></li>
+					<li><a href='#'>@GetRequest_GetAllPatient_PatientRole</a></li>
+					<li><a href='#'>@PostRequest_CreateTokenForValidDietician</a></li>
+					<li><a href='#'>@GetRequest_GETPatient_Details_ByFileID_PatientRole</a></li>
+					<li><a href='#'>@DeleteRequest_DeletePatientBypatienID</a></li>
+					<li><a href='#'>@GetRequest_GETPatient_Details_ByFileID</a></li>
+					<li><a href='#'>@PutRequest_UpdatePatient</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Features</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='$0%'>
+                    <span class='strong'>0</span> features passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>
+                    1</span> features failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Scenarios</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='child-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='57%'>
+                    <span class='strong'>15</span> scenarios passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='42%'>
+                    11</span> scenarios failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> others
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Steps</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='grandchild-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='85%'>
+                    <span class='strong'>67</span> steps passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='14%'>
+                    11</span> steps failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>User as a Dietician and Patient End to End Flow Feature</span>
+						<span class='test-time'>Nov 21, 2023 03:35:57 AM</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='2' status='pass'>
+
+	<span class='duration right label'>00 00 05.709</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: A token is generated for Dietician with valid credentials</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@PostRequest_CreateTokenForValidDietician</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='3' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_create_request_for_Dietician_API_endpoint())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User create request for Dietician API endpoint</div>
+
+
+		</li>
+		<li test-id='4' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_sends_HTTPS_Post_Request_and_request_Body_to_generate_access_token_for_valid_Dietician())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User sends HTTPS Post Request and  request Body to generate access token for valid Dietician</div>
+
+
+		</li>
+		<li test-id='5' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_success_status_with_response_body_and_token_is_generated(java.lang.Integer))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then User receives  200 success status with response body and token is generated</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='6' status='fail'>
+
+	<span class='duration right label'>00 00 01.060</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: User with Dietician role and valid credentials is able to create new patients</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@PostRequest_CreateNewPatient</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='7' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_create_request_for_Dietician_API_endpoint())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User create request for Dietician API endpoint</div>
+
+
+		</li>
+		<li test-id='8' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_sends_HTTPS_Post_Request_and_request_Body_to_create_a_new_Patient())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User sends HTTPS Post Request and  request Body to create a new Patient</div>
+
+
+		</li>
+		<li test-id='9' class='node then Fail' status='Fail'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_created_status_with_response_body_and_patient_is_created(java.lang.Integer))"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then User receives  201 created status with response body and patient is created</div>
+
+
+					<textarea disabled class="code-block">io.restassured.module.jsv.JsonSchemaValidationException: java.io.FileNotFoundException: .\src\test\resources\Schema\PostPatient\PostUserLogin.json (The system cannot find the file specified)
+	at io.restassured.module.jsv.JsonSchemaValidator$JsonSchemaValidatorFactory.create(JsonSchemaValidator.java:286)
+	at io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema(JsonSchemaValidator.java:157)
+	at api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_created_status_with_response_body_and_patient_is_created(UserAsDieticianAndPatientRole_E2E_SD.java:90)
+	at ✽.User receives  201 created status with response body and patient is created(file:///C:/Users/tusha/eclipse-workspace/eclipseworkspace5/Team15_API_Analysers_RestAssured_BDD/src/test/resources/Features/02UserAsDieticianAndPatientRole_E2EFlow.feature:16)
+Caused by: java.io.FileNotFoundException: .\src\test\resources\Schema\PostPatient\PostUserLogin.json (The system cannot find the file specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at com.github.fge.jackson.JsonLoader.fromFile(JsonLoader.java:165)
+	at io.restassured.module.jsv.JsonSchemaValidator$3.createSchemaInstance(JsonSchemaValidator.java:155)
+	at io.restassured.module.jsv.JsonSchemaValidator$3.createSchemaInstance(JsonSchemaValidator.java:152)
+	at io.restassured.module.jsv.JsonSchemaValidator$JsonSchemaValidatorFactory.create(JsonSchemaValidator.java:284)
+	at io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema(JsonSchemaValidator.java:157)
+	at api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_created_status_with_response_body_and_patient_is_created(UserAsDieticianAndPatientRole_E2E_SD.java:90)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:66)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:149)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:185)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:83)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:219)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+</textarea>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='10' status='pass'>
+
+	<span class='duration right label'>00 00 00.335</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: User with Dietician role and valid credentials is able to create new patients</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@GetRequest_GetAllPatient</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='11' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_create_request_for_Dietician_API_endpoint())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User create request for Dietician API endpoint</div>
+
+
+		</li>
+		<li test-id='12' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_sends_HTTPS_Get_Request_to_view_all_patient())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User sends HTTPS Get Request to view all patient</div>
+
+
+		</li>
+		<li test-id='13' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_success_status_with_response_body(java.lang.Integer))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then User receives  200 success status with response body</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='14' status='pass'>
+
+	<span class='duration right label'>00 00 00.346</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: User with Dietician role and valid credentials is able to view all patient morbidity details</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@GetRequest_GETAllMorbidity</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='15' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_create_request_for_Dietician_API_endpoint())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User create request for Dietician API endpoint</div>
+
+
+		</li>
+		<li test-id='16' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_sends_HTTPS_Get_Request_to_view_all_patient_morbidity_details())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User sends HTTPS Get Request to view all patient morbidity details</div>
+
+
+		</li>
+		<li test-id='17' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_success_status_with_response_body(java.lang.Integer))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then User receives  200 success status with response body</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='18' status='pass'>
+
+	<span class='duration right label'>00 00 00.363</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: User with Dietician role and valid credentials is able to view all patient morbidity by testname</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@GetRequest_GETMorbidity_ByTestName</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='19' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_create_request_for_Dietician_API_endpoint())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User create request for Dietician API endpoint</div>
+
+
+		</li>
+		<li test-id='20' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_sends_HTTPS_Get_Request_to_view_all_patient_morbidity_by_testname())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User sends HTTPS Get Request to view all patient morbidity by testname</div>
+
+
+		</li>
+		<li test-id='21' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_success_status_with_response_body(java.lang.Integer))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then User receives  200 success status with response body</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='22' status='pass'>
+
+	<span class='duration right label'>00 00 00.431</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: User with Dietician role and valid credentials is able to view all patient test reports by patientID</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@GetRequest_GETPatient_MorbidityDetails_ByPatientID</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='23' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_create_request_for_Dietician_API_endpoint())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User create request for Dietician API endpoint</div>
+
+
+		</li>
+		<li test-id='24' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_sends_HTTPS_Get_Request_to_view_all_patient_test_reports_by_patientID())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User sends HTTPS Get Request to view patient test reports by patientID</div>
+
+
+		</li>
+		<li test-id='25' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_success_status_with_response_body(java.lang.Integer))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then User receives  200 success status with response body</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='26' status='pass'>
+
+	<span class='duration right label'>00 00 00.568</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: User with Dietician role and valid credentials is able to view all patient test reports by patientID</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@GetRequest_GETPatient_Details_ByFileID</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='27' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_create_request_for_Dietician_API_endpoint())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User create request for Dietician API endpoint</div>
+
+
+		</li>
+		<li test-id='28' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_sends_HTTPS_Get_Request_to_view_patient_test_reports_by_FileID())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User sends HTTPS Get Request to view patient test reports by FileID</div>
+
+
+		</li>
+		<li test-id='29' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_success_status_with_response_body(java.lang.Integer))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then User receives  200 success status with response body</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='30' status='pass'>
+
+	<span class='duration right label'>00 00 00.639</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: User with Dietician role and valid credentials is able to create new patients</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@PutRequest_UpdatePatient</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='31' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_create_request_for_Dietician_API_endpoint())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User create request for Dietician API endpoint</div>
+
+
+		</li>
+		<li test-id='32' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_sends_HTTPS_Put_Request_and_request_Body_to_update_patient_details())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User sends HTTPS Put Request and  request Body to update patient details</div>
+
+
+		</li>
+		<li test-id='33' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_success_status_with_response_body(java.lang.Integer))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then User receives  200 success status with response body</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='34' status='pass'>
+
+	<span class='duration right label'>00 00 00.377</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: User with Dietician role and valid credentials is able to create new patients</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@DeleteRequest_DeletePatientBypatienID</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='35' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_create_request_for_Dietician_API_endpoint())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User create request for Dietician API endpoint</div>
+
+
+		</li>
+		<li test-id='36' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_sends_HTTPS_delete_Request_to_patient_by_Id())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User sends HTTPS delete Request to patient by Id</div>
+
+
+		</li>
+		<li test-id='37' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_success_status_with_response_body(java.lang.Integer))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then User receives  200 success status with response body</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='38' status='fail'>
+
+	<span class='duration right label'>00 00 00.795</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: User with Dietician role and valid credentials is able to create new patients</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@PostRequest_CreateNewPatient2</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='39' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_create_request_for_Dietician_API_endpoint())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User create request for Dietician API endpoint</div>
+
+
+		</li>
+		<li test-id='40' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_sends_HTTPS_Post_Request_and_request_Body_to_create_a_new_Patient())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User sends HTTPS Post Request and  request Body to create a new Patient</div>
+
+
+		</li>
+		<li test-id='41' class='node then Fail' status='Fail'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_created_status_with_response_body_and_patient_is_created(java.lang.Integer))"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then User receives  201 created status with response body and patient is created</div>
+
+
+					<textarea disabled class="code-block">io.restassured.module.jsv.JsonSchemaValidationException: java.io.FileNotFoundException: .\src\test\resources\Schema\PostPatient\PostUserLogin.json (The system cannot find the file specified)
+	at io.restassured.module.jsv.JsonSchemaValidator$JsonSchemaValidatorFactory.create(JsonSchemaValidator.java:286)
+	at io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema(JsonSchemaValidator.java:157)
+	at api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_created_status_with_response_body_and_patient_is_created(UserAsDieticianAndPatientRole_E2E_SD.java:90)
+	at ✽.User receives  201 created status with response body and patient is created(file:///C:/Users/tusha/eclipse-workspace/eclipseworkspace5/Team15_API_Analysers_RestAssured_BDD/src/test/resources/Features/02UserAsDieticianAndPatientRole_E2EFlow.feature:73)
+Caused by: java.io.FileNotFoundException: .\src\test\resources\Schema\PostPatient\PostUserLogin.json (The system cannot find the file specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at com.github.fge.jackson.JsonLoader.fromFile(JsonLoader.java:165)
+	at io.restassured.module.jsv.JsonSchemaValidator$3.createSchemaInstance(JsonSchemaValidator.java:155)
+	at io.restassured.module.jsv.JsonSchemaValidator$3.createSchemaInstance(JsonSchemaValidator.java:152)
+	at io.restassured.module.jsv.JsonSchemaValidator$JsonSchemaValidatorFactory.create(JsonSchemaValidator.java:284)
+	at io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema(JsonSchemaValidator.java:157)
+	at api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_created_status_with_response_body_and_patient_is_created(UserAsDieticianAndPatientRole_E2E_SD.java:90)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:66)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:149)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:185)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:83)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:219)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+</textarea>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='42' status='pass'>
+
+	<span class='duration right label'>00 00 00.298</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: User with Dietician role and valid credentials is able to Logout</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@GetRequest_GETLogoutDietician</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='43' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_create_request_for_Dietician_API_endpoint())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User create request for Dietician API endpoint</div>
+
+
+		</li>
+		<li test-id='44' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_sends_HTTPS_Get_Request_to_logout_as_Dietician())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User sends HTTPS Get Request to logout as Dietician</div>
+
+
+		</li>
+		<li test-id='45' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_success_status_with_response_body(java.lang.Integer))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then User receives  200 success status with response body</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='46' status='fail'>
+
+	<span class='duration right label'>00 00 00.353</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: User with Dietician role and valid credentials after logout should not be able to view patients</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@GetRequest_GetAllPatient</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='47' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_create_request_for_Dietician_API_endpoint())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User create request for Dietician API endpoint</div>
+
+
+		</li>
+		<li test-id='48' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_sends_HTTPS_Get_Request_to_view_all_patient())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User sends HTTPS Get Request to view all patient</div>
+
+
+		</li>
+		<li test-id='49' class='node then Fail' status='Fail'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_Unauthorized_status_with_response_body(java.lang.Integer))"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then User receives  401 Unauthorized status with response body</div>
+
+
+					<textarea disabled class="code-block">java.lang.AssertionError: 1 expectation failed.
+Expected status code <403> but was <200>.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_Unauthorized_status_with_response_body(UserAsDieticianAndPatientRole_E2E_SD.java:157)
+	at ✽.User receives  401 Unauthorized status with response body(file:///C:/Users/tusha/eclipse-workspace/eclipseworkspace5/Team15_API_Analysers_RestAssured_BDD/src/test/resources/Features/02UserAsDieticianAndPatientRole_E2EFlow.feature:87)
+</textarea>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='50' status='fail'>
+
+	<span class='duration right label'>00 00 00.657</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: User with Dietician role and valid credentials after logout should not be able to update new patients</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@PutRequest_UpdatePatient</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='51' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_create_request_for_Dietician_API_endpoint())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User create request for Dietician API endpoint</div>
+
+
+		</li>
+		<li test-id='52' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_sends_HTTPS_Put_Request_and_request_Body_to_update_patient_details())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User sends HTTPS Put Request and  request Body to update patient details</div>
+
+
+		</li>
+		<li test-id='53' class='node then Fail' status='Fail'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_Unauthorized_status_with_response_body(java.lang.Integer))"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then User receives  401 Unauthorized status with response body</div>
+
+
+					<textarea disabled class="code-block">java.lang.AssertionError: 1 expectation failed.
+Expected status code <403> but was <200>.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_Unauthorized_status_with_response_body(UserAsDieticianAndPatientRole_E2E_SD.java:157)
+	at ✽.User receives  401 Unauthorized status with response body(file:///C:/Users/tusha/eclipse-workspace/eclipseworkspace5/Team15_API_Analysers_RestAssured_BDD/src/test/resources/Features/02UserAsDieticianAndPatientRole_E2EFlow.feature:94)
+</textarea>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='54' status='fail'>
+
+	<span class='duration right label'>00 00 00.302</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: User with Dietician role and valid credentials after logout should not be able to view all patient morbidity details</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@GetRequest_GETAllMorbidity</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='55' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_create_request_for_Dietician_API_endpoint())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User create request for Dietician API endpoint</div>
+
+
+		</li>
+		<li test-id='56' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_sends_HTTPS_Get_Request_to_view_all_patient_morbidity_details())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User sends HTTPS Get Request to view all patient morbidity details</div>
+
+
+		</li>
+		<li test-id='57' class='node then Fail' status='Fail'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_Unauthorized_status_with_response_body(java.lang.Integer))"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then User receives  401 Unauthorized status with response body</div>
+
+
+					<textarea disabled class="code-block">java.lang.AssertionError: 1 expectation failed.
+Expected status code <403> but was <200>.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_Unauthorized_status_with_response_body(UserAsDieticianAndPatientRole_E2E_SD.java:157)
+	at ✽.User receives  401 Unauthorized status with response body(file:///C:/Users/tusha/eclipse-workspace/eclipseworkspace5/Team15_API_Analysers_RestAssured_BDD/src/test/resources/Features/02UserAsDieticianAndPatientRole_E2EFlow.feature:101)
+</textarea>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='58' status='fail'>
+
+	<span class='duration right label'>00 00 00.371</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: User with Dietician role and valid credentials after logout should not be able to view all patient morbidity by testname</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@GetRequest_GETMorbidity_ByTestName</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='59' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_create_request_for_Dietician_API_endpoint())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User create request for Dietician API endpoint</div>
+
+
+		</li>
+		<li test-id='60' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_sends_HTTPS_Get_Request_to_view_all_patient_morbidity_by_testname())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User sends HTTPS Get Request to view all patient morbidity by testname</div>
+
+
+		</li>
+		<li test-id='61' class='node then Fail' status='Fail'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_Unauthorized_status_with_response_body(java.lang.Integer))"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then User receives  401 Unauthorized status with response body</div>
+
+
+					<textarea disabled class="code-block">java.lang.AssertionError: 1 expectation failed.
+Expected status code <403> but was <200>.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_Unauthorized_status_with_response_body(UserAsDieticianAndPatientRole_E2E_SD.java:157)
+	at ✽.User receives  401 Unauthorized status with response body(file:///C:/Users/tusha/eclipse-workspace/eclipseworkspace5/Team15_API_Analysers_RestAssured_BDD/src/test/resources/Features/02UserAsDieticianAndPatientRole_E2EFlow.feature:108)
+</textarea>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='62' status='fail'>
+
+	<span class='duration right label'>00 00 00.330</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: User with Dietician role and valid credentials after logout should not be able to view all patient test reports by patientID</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@GetRequest_GETPatient_MorbidityDetails_ByPatientID</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='63' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_create_request_for_Dietician_API_endpoint())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User create request for Dietician API endpoint</div>
+
+
+		</li>
+		<li test-id='64' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_sends_HTTPS_Get_Request_to_view_all_patient_test_reports_by_patientID())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User sends HTTPS Get Request to view patient test reports by patientID</div>
+
+
+		</li>
+		<li test-id='65' class='node then Fail' status='Fail'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_Unauthorized_status_with_response_body(java.lang.Integer))"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then User receives  401 Unauthorized status with response body</div>
+
+
+					<textarea disabled class="code-block">java.lang.AssertionError: 1 expectation failed.
+Expected status code <403> but was <200>.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_Unauthorized_status_with_response_body(UserAsDieticianAndPatientRole_E2E_SD.java:157)
+	at ✽.User receives  401 Unauthorized status with response body(file:///C:/Users/tusha/eclipse-workspace/eclipseworkspace5/Team15_API_Analysers_RestAssured_BDD/src/test/resources/Features/02UserAsDieticianAndPatientRole_E2EFlow.feature:115)
+</textarea>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='66' status='fail'>
+
+	<span class='duration right label'>00 00 00.540</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: User with Dietician role and valid credentials after logout should not be able to view all patient test reports by patientID</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@GetRequest_GETPatient_Details_ByFileID</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='67' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_create_request_for_Dietician_API_endpoint())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User create request for Dietician API endpoint</div>
+
+
+		</li>
+		<li test-id='68' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_sends_HTTPS_Get_Request_to_view_patient_test_reports_by_FileID())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User sends HTTPS Get Request to view patient test reports by FileID</div>
+
+
+		</li>
+		<li test-id='69' class='node then Fail' status='Fail'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_Unauthorized_status_with_response_body(java.lang.Integer))"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then User receives  401 Unauthorized status with response body</div>
+
+
+					<textarea disabled class="code-block">java.lang.AssertionError: 1 expectation failed.
+Expected status code <403> but was <200>.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_Unauthorized_status_with_response_body(UserAsDieticianAndPatientRole_E2E_SD.java:157)
+	at ✽.User receives  401 Unauthorized status with response body(file:///C:/Users/tusha/eclipse-workspace/eclipseworkspace5/Team15_API_Analysers_RestAssured_BDD/src/test/resources/Features/02UserAsDieticianAndPatientRole_E2EFlow.feature:122)
+</textarea>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='70' status='fail'>
+
+	<span class='duration right label'>00 00 00.522</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: A token is generated for Dietician with valid credentials</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@PostRequest_CreateTokenForValidPatient</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='71' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_create_request_for_Dietician_API_endpoint())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User create request for Dietician API endpoint</div>
+
+
+		</li>
+		<li test-id='72' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_sends_HTTPS_Post_Request_and_request_Body_to_generate_access_token_for_valid_Patient())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User sends HTTPS Post Request and  request Body to generate access token for valid Patient</div>
+
+
+		</li>
+		<li test-id='73' class='node then Fail' status='Fail'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_success_status_with_response_body_and_token_is_generated(java.lang.Integer))"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then User receives  200 success status with response body and token is generated</div>
+
+
+					<textarea disabled class="code-block">org.junit.ComparisonFailure: expected:<...UzUxMiJ9.eyJzdWIiOiJ[wcmljaGFzZW9mY0BnbWFpbC5jb20iLCJpYXQiOjE3MDA1NTkzNjIsImV4cCI6MTcwMDU4ODE2Mn0.OpYlD5gjtsdCNxh5NnjtnD_AtgySPb2K9ivEA98XbrMx-HD6l0XKUopjWUAwhMRJKaP9q6DQZvAGHnK9iF6cpA]> but was:<...UzUxMiJ9.eyJzdWIiOiJ[Ccm9va2VAZ21haWwuY29tIiwiaWF0IjoxNzAwNTU5MzcyLCJleHAiOjE3MDA1ODgxNzJ9.x2DKlC-cp8xfbJkQc62AAPojAV1p9SKytJdkARonGWbHkmUmwWs1fY7UgXsEa-NqbtX794ECu-_uiV_eRbVzjw]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_success_status_with_response_body_and_token_is_generated(UserAsDieticianAndPatientRole_E2E_SD.java:46)
+	at ✽.User receives  200 success status with response body and token is generated(file:///C:/Users/tusha/eclipse-workspace/eclipseworkspace5/Team15_API_Analysers_RestAssured_BDD/src/test/resources/Features/02UserAsDieticianAndPatientRole_E2EFlow.feature:129)
+</textarea>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='74' status='pass'>
+
+	<span class='duration right label'>00 00 00.283</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: User with Patient role and valid credentials is able to view all patient test reports by patientID</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@GetRequest_GETPatient_MorbidityDetails_ByPatientID_PatientRole</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='75' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_create_request_for_Dietician_API_endpoint())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User create request for Dietician API endpoint</div>
+
+
+		</li>
+		<li test-id='76' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_sends_HTTPS_Get_Request_to_view_patient_test_reports_by_patientID_as_Patient_role())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User sends HTTPS Get Request to view patient test reports by patientID as Patient role</div>
+
+
+		</li>
+		<li test-id='77' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_success_status_with_response_body(java.lang.Integer))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then User receives  200 success status with response body</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='78' status='pass'>
+
+	<span class='duration right label'>00 00 00.584</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: User with Patient role and valid credentials is able to view  patient test reports by patientID</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@GetRequest_GETPatient_Details_ByFileID_PatientRole</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='79' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_create_request_for_Dietician_API_endpoint())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User create request for Dietician API endpoint</div>
+
+
+		</li>
+		<li test-id='80' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_sends_HTTPS_Get_Request_to_view_patient_test_reports_by_FileID_as_Patient_role())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User sends HTTPS Get Request to view patient test reports by FileID as Patient role</div>
+
+
+		</li>
+		<li test-id='81' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_success_status_with_response_body(java.lang.Integer))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then User receives  200 success status with response body</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='82' status='pass'>
+
+	<span class='duration right label'>00 00 00.331</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: User with Patient role and valid credentials should not be able to view all patients records</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@GetRequest_GetAllPatient_PatientRole</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='83' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_create_request_for_Dietician_API_endpoint())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User create request for Dietician API endpoint</div>
+
+
+		</li>
+		<li test-id='84' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_sends_HTTPS_Get_Request_to_view_all_patient_as_Patient_role())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User sends HTTPS Get Request to view all patient as Patient role</div>
+
+
+		</li>
+		<li test-id='85' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_Unauthorized_status_with_response_body(java.lang.Integer))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then User receives  403 Unauthorized status with response body</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='86' status='fail'>
+
+	<span class='duration right label'>00 00 00.306</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: User with Dietician role and valid credentials after logout should not be able to view all patient morbidity details</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@GetRequest_GETAllMorbidity_PatientRole</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='87' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_create_request_for_Dietician_API_endpoint())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User create request for Dietician API endpoint</div>
+
+
+		</li>
+		<li test-id='88' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_sends_HTTPS_Get_Request_to_view_all_patient_morbidity_details_as_a_Patient_role())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User sends HTTPS Get Request to view all patient morbidity details as a Patient role</div>
+
+
+		</li>
+		<li test-id='89' class='node then Fail' status='Fail'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_Unauthorized_status_with_response_body(java.lang.Integer))"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then User receives  403 Unauthorized status with response body</div>
+
+
+					<textarea disabled class="code-block">java.lang.AssertionError: 1 expectation failed.
+Expected status code <403> but was <200>.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_Unauthorized_status_with_response_body(UserAsDieticianAndPatientRole_E2E_SD.java:157)
+	at ✽.User receives  403 Unauthorized status with response body(file:///C:/Users/tusha/eclipse-workspace/eclipseworkspace5/Team15_API_Analysers_RestAssured_BDD/src/test/resources/Features/02UserAsDieticianAndPatientRole_E2EFlow.feature:157)
+</textarea>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='90' status='fail'>
+
+	<span class='duration right label'>00 00 00.389</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: User with Dietician role and valid credentials after logout should not be able to view all patient morbidity by testname</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@GetRequest_GETMorbidity_ByTestName_PatientRole</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='91' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_create_request_for_Dietician_API_endpoint())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User create request for Dietician API endpoint</div>
+
+
+		</li>
+		<li test-id='92' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_sends_HTTPS_Get_Request_to_view_all_patient_morbidity_by_testname_as_a_Patient_role())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User sends HTTPS Get Request to view all patient morbidity by testname as a Patient role</div>
+
+
+		</li>
+		<li test-id='93' class='node then Fail' status='Fail'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_Unauthorized_status_with_response_body(java.lang.Integer))"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then User receives  403 Unauthorized status with response body</div>
+
+
+					<textarea disabled class="code-block">java.lang.AssertionError: 1 expectation failed.
+Expected status code <403> but was <200>.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_Unauthorized_status_with_response_body(UserAsDieticianAndPatientRole_E2E_SD.java:157)
+	at ✽.User receives  403 Unauthorized status with response body(file:///C:/Users/tusha/eclipse-workspace/eclipseworkspace5/Team15_API_Analysers_RestAssured_BDD/src/test/resources/Features/02UserAsDieticianAndPatientRole_E2EFlow.feature:164)
+</textarea>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='94' status='pass'>
+
+	<span class='duration right label'>00 00 00.333</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: User with Dietician role and valid credentials is able to Logout</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@GetRequest_GETLogoutPatient</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='95' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_create_request_for_Dietician_API_endpoint())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User create request for Dietician API endpoint</div>
+
+
+		</li>
+		<li test-id='96' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_sends_HTTPS_Get_Request_to_logout_as_Patient())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User sends HTTPS Get Request to logout as Patient</div>
+
+
+		</li>
+		<li test-id='97' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_success_status_with_response_body(java.lang.Integer))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then User receives  200 success status with response body</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='98' status='pass'>
+
+	<span class='duration right label'>00 00 00.492</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: A token is generated for Dietician with valid credentials</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@PostRequest_CreateTokenForValidDietician</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='99' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_create_request_for_Dietician_API_endpoint())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User create request for Dietician API endpoint</div>
+
+
+		</li>
+		<li test-id='100' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_sends_HTTPS_Post_Request_and_request_Body_to_generate_access_token_for_valid_Dietician())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User sends HTTPS Post Request and  request Body to generate access token for valid Dietician</div>
+
+
+		</li>
+		<li test-id='101' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_success_status_with_response_body_and_token_is_generated(java.lang.Integer))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then User receives  200 success status with response body and token is generated</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='102' status='pass'>
+
+	<span class='duration right label'>00 00 00.370</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: User with Dietician role and valid credentials is able to create new patients</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@DeleteRequest_DeletePatientBypatienID</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='103' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_create_request_for_Dietician_API_endpoint())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User create request for Dietician API endpoint</div>
+
+
+		</li>
+		<li test-id='104' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_sends_HTTPS_delete_Request_to_patient_by_Id())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User sends HTTPS delete Request to patient by Id</div>
+
+
+		</li>
+		<li test-id='105' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_success_status_with_response_body(java.lang.Integer))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then User receives  200 success status with response body</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><div id='category-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='category-collection' class='category-collection'>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@GetRequest_GETPatient_MorbidityDetails_ByPatientID</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Nov 21, 2023 03:36:05 AM</td>
+										<td class='linked' test-id='22'>User with Dietician role and valid credentials is able to view all patient test reports by patientID</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Nov 21, 2023 03:36:10 AM</td>
+										<td class='linked' test-id='62'>User with Dietician role and valid credentials after logout should not be able to view all patient test reports by patientID</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@GetRequest_GETLogoutPatient</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Nov 21, 2023 03:36:13 AM</td>
+										<td class='linked' test-id='94'>User with Dietician role and valid credentials is able to Logout</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@GetRequest_GETLogoutDietician</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Nov 21, 2023 03:36:08 AM</td>
+										<td class='linked' test-id='42'>User with Dietician role and valid credentials is able to Logout</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@GetRequest_GetAllPatient</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Nov 21, 2023 03:36:04 AM</td>
+										<td class='linked' test-id='10'>User with Dietician role and valid credentials is able to create new patients</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Nov 21, 2023 03:36:08 AM</td>
+										<td class='linked' test-id='46'>User with Dietician role and valid credentials after logout should not be able to view patients</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@PostRequest_CreateNewPatient2</span>
+						<span class='category-status right'>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Nov 21, 2023 03:36:07 AM</td>
+										<td class='linked' test-id='38'>User with Dietician role and valid credentials is able to create new patients</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@GetRequest_GETPatient_MorbidityDetails_ByPatientID_PatientRole</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Nov 21, 2023 03:36:11 AM</td>
+										<td class='linked' test-id='74'>User with Patient role and valid credentials is able to view all patient test reports by patientID</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@GetRequest_GETMorbidity_ByTestName_PatientRole</span>
+						<span class='category-status right'>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Nov 21, 2023 03:36:13 AM</td>
+										<td class='linked' test-id='90'>User with Dietician role and valid credentials after logout should not be able to view all patient morbidity by testname</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@GetRequest_GETMorbidity_ByTestName</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Nov 21, 2023 03:36:04 AM</td>
+										<td class='linked' test-id='18'>User with Dietician role and valid credentials is able to view all patient morbidity by testname</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Nov 21, 2023 03:36:09 AM</td>
+										<td class='linked' test-id='58'>User with Dietician role and valid credentials after logout should not be able to view all patient morbidity by testname</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@PostRequest_CreateTokenForValidPatient</span>
+						<span class='category-status right'>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Nov 21, 2023 03:36:11 AM</td>
+										<td class='linked' test-id='70'>A token is generated for Dietician with valid credentials</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@PostRequest_CreateNewPatient</span>
+						<span class='category-status right'>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Nov 21, 2023 03:36:03 AM</td>
+										<td class='linked' test-id='6'>User with Dietician role and valid credentials is able to create new patients</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@GetRequest_GETAllMorbidity_PatientRole</span>
+						<span class='category-status right'>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Nov 21, 2023 03:36:13 AM</td>
+										<td class='linked' test-id='86'>User with Dietician role and valid credentials after logout should not be able to view all patient morbidity details</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@GetRequest_GETAllMorbidity</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Nov 21, 2023 03:36:04 AM</td>
+										<td class='linked' test-id='14'>User with Dietician role and valid credentials is able to view all patient morbidity details</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Nov 21, 2023 03:36:09 AM</td>
+										<td class='linked' test-id='54'>User with Dietician role and valid credentials after logout should not be able to view all patient morbidity details</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@GetRequest_GetAllPatient_PatientRole</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Nov 21, 2023 03:36:12 AM</td>
+										<td class='linked' test-id='82'>User with Patient role and valid credentials should not be able to view all patients records</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@PostRequest_CreateTokenForValidDietician</span>
+						<span class='category-status right'>
+						<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Nov 21, 2023 03:35:57 AM</td>
+										<td class='linked' test-id='2'>A token is generated for Dietician with valid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Nov 21, 2023 03:36:14 AM</td>
+										<td class='linked' test-id='98'>A token is generated for Dietician with valid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@GetRequest_GETPatient_Details_ByFileID_PatientRole</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Nov 21, 2023 03:36:12 AM</td>
+										<td class='linked' test-id='78'>User with Patient role and valid credentials is able to view  patient test reports by patientID</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@DeleteRequest_DeletePatientBypatienID</span>
+						<span class='category-status right'>
+						<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Nov 21, 2023 03:36:07 AM</td>
+										<td class='linked' test-id='34'>User with Dietician role and valid credentials is able to create new patients</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Nov 21, 2023 03:36:14 AM</td>
+										<td class='linked' test-id='102'>User with Dietician role and valid credentials is able to create new patients</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@GetRequest_GETPatient_Details_ByFileID</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Nov 21, 2023 03:36:05 AM</td>
+										<td class='linked' test-id='26'>User with Dietician role and valid credentials is able to view all patient test reports by patientID</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Nov 21, 2023 03:36:10 AM</td>
+										<td class='linked' test-id='66'>User with Dietician role and valid credentials after logout should not be able to view all patient test reports by patientID</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@PutRequest_UpdatePatient</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Nov 21, 2023 03:36:06 AM</td>
+										<td class='linked' test-id='30'>User with Dietician role and valid credentials is able to create new patients</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Nov 21, 2023 03:36:08 AM</td>
+										<td class='linked' test-id='50'>User with Dietician role and valid credentials after logout should not be able to update new patients</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>java.lang.AssertionError</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>8</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Nov 21, 2023 03:36:08 AM</td>
+										<td class='linked' test-id='49'>Then User receives  401 Unauthorized status with response body</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: 1 expectation failed.
+Expected status code <403> but was <200>.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_Unauthorized_status_with_response_body(UserAsDieticianAndPatientRole_E2E_SD.java:157)
+	at ✽.User receives  401 Unauthorized status with response body(file:///C:/Users/tusha/eclipse-workspace/eclipseworkspace5/Team15_API_Analysers_RestAssured_BDD/src/test/resources/Features/02UserAsDieticianAndPatientRole_E2EFlow.feature:87)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Nov 21, 2023 03:36:09 AM</td>
+										<td class='linked' test-id='53'>Then User receives  401 Unauthorized status with response body</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: 1 expectation failed.
+Expected status code <403> but was <200>.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_Unauthorized_status_with_response_body(UserAsDieticianAndPatientRole_E2E_SD.java:157)
+	at ✽.User receives  401 Unauthorized status with response body(file:///C:/Users/tusha/eclipse-workspace/eclipseworkspace5/Team15_API_Analysers_RestAssured_BDD/src/test/resources/Features/02UserAsDieticianAndPatientRole_E2EFlow.feature:87)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Nov 21, 2023 03:36:09 AM</td>
+										<td class='linked' test-id='57'>Then User receives  401 Unauthorized status with response body</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: 1 expectation failed.
+Expected status code <403> but was <200>.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_Unauthorized_status_with_response_body(UserAsDieticianAndPatientRole_E2E_SD.java:157)
+	at ✽.User receives  401 Unauthorized status with response body(file:///C:/Users/tusha/eclipse-workspace/eclipseworkspace5/Team15_API_Analysers_RestAssured_BDD/src/test/resources/Features/02UserAsDieticianAndPatientRole_E2EFlow.feature:87)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Nov 21, 2023 03:36:10 AM</td>
+										<td class='linked' test-id='61'>Then User receives  401 Unauthorized status with response body</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: 1 expectation failed.
+Expected status code <403> but was <200>.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_Unauthorized_status_with_response_body(UserAsDieticianAndPatientRole_E2E_SD.java:157)
+	at ✽.User receives  401 Unauthorized status with response body(file:///C:/Users/tusha/eclipse-workspace/eclipseworkspace5/Team15_API_Analysers_RestAssured_BDD/src/test/resources/Features/02UserAsDieticianAndPatientRole_E2EFlow.feature:87)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Nov 21, 2023 03:36:10 AM</td>
+										<td class='linked' test-id='65'>Then User receives  401 Unauthorized status with response body</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: 1 expectation failed.
+Expected status code <403> but was <200>.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_Unauthorized_status_with_response_body(UserAsDieticianAndPatientRole_E2E_SD.java:157)
+	at ✽.User receives  401 Unauthorized status with response body(file:///C:/Users/tusha/eclipse-workspace/eclipseworkspace5/Team15_API_Analysers_RestAssured_BDD/src/test/resources/Features/02UserAsDieticianAndPatientRole_E2EFlow.feature:87)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Nov 21, 2023 03:36:11 AM</td>
+										<td class='linked' test-id='69'>Then User receives  401 Unauthorized status with response body</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: 1 expectation failed.
+Expected status code <403> but was <200>.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_Unauthorized_status_with_response_body(UserAsDieticianAndPatientRole_E2E_SD.java:157)
+	at ✽.User receives  401 Unauthorized status with response body(file:///C:/Users/tusha/eclipse-workspace/eclipseworkspace5/Team15_API_Analysers_RestAssured_BDD/src/test/resources/Features/02UserAsDieticianAndPatientRole_E2EFlow.feature:87)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Nov 21, 2023 03:36:13 AM</td>
+										<td class='linked' test-id='89'>Then User receives  403 Unauthorized status with response body</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: 1 expectation failed.
+Expected status code <403> but was <200>.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_Unauthorized_status_with_response_body(UserAsDieticianAndPatientRole_E2E_SD.java:157)
+	at ✽.User receives  401 Unauthorized status with response body(file:///C:/Users/tusha/eclipse-workspace/eclipseworkspace5/Team15_API_Analysers_RestAssured_BDD/src/test/resources/Features/02UserAsDieticianAndPatientRole_E2EFlow.feature:87)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Nov 21, 2023 03:36:13 AM</td>
+										<td class='linked' test-id='93'>Then User receives  403 Unauthorized status with response body</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: 1 expectation failed.
+Expected status code <403> but was <200>.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_Unauthorized_status_with_response_body(UserAsDieticianAndPatientRole_E2E_SD.java:157)
+	at ✽.User receives  401 Unauthorized status with response body(file:///C:/Users/tusha/eclipse-workspace/eclipseworkspace5/Team15_API_Analysers_RestAssured_BDD/src/test/resources/Features/02UserAsDieticianAndPatientRole_E2EFlow.feature:87)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.junit.ComparisonFailure</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Nov 21, 2023 03:36:11 AM</td>
+										<td class='linked' test-id='73'>Then User receives  200 success status with response body and token is generated</td>
+										<td>
+											<textarea disabled class="code-block">org.junit.ComparisonFailure: expected:<...UzUxMiJ9.eyJzdWIiOiJ[wcmljaGFzZW9mY0BnbWFpbC5jb20iLCJpYXQiOjE3MDA1NTkzNjIsImV4cCI6MTcwMDU4ODE2Mn0.OpYlD5gjtsdCNxh5NnjtnD_AtgySPb2K9ivEA98XbrMx-HD6l0XKUopjWUAwhMRJKaP9q6DQZvAGHnK9iF6cpA]> but was:<...UzUxMiJ9.eyJzdWIiOiJ[Ccm9va2VAZ21haWwuY29tIiwiaWF0IjoxNzAwNTU5MzcyLCJleHAiOjE3MDA1ODgxNzJ9.x2DKlC-cp8xfbJkQc62AAPojAV1p9SKytJdkARonGWbHkmUmwWs1fY7UgXsEa-NqbtX794ECu-_uiV_eRbVzjw]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_success_status_with_response_body_and_token_is_generated(UserAsDieticianAndPatientRole_E2E_SD.java:46)
+	at ✽.User receives  200 success status with response body and token is generated(file:///C:/Users/tusha/eclipse-workspace/eclipseworkspace5/Team15_API_Analysers_RestAssured_BDD/src/test/resources/Features/02UserAsDieticianAndPatientRole_E2EFlow.feature:129)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>io.restassured.module.jsv.JsonSchemaValidationException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Nov 21, 2023 03:36:04 AM</td>
+										<td class='linked' test-id='9'>Then User receives  201 created status with response body and patient is created</td>
+										<td>
+											<textarea disabled class="code-block">io.restassured.module.jsv.JsonSchemaValidationException: java.io.FileNotFoundException: .\src\test\resources\Schema\PostPatient\PostUserLogin.json (The system cannot find the file specified)
+	at io.restassured.module.jsv.JsonSchemaValidator$JsonSchemaValidatorFactory.create(JsonSchemaValidator.java:286)
+	at io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema(JsonSchemaValidator.java:157)
+	at api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_created_status_with_response_body_and_patient_is_created(UserAsDieticianAndPatientRole_E2E_SD.java:90)
+	at ✽.User receives  201 created status with response body and patient is created(file:///C:/Users/tusha/eclipse-workspace/eclipseworkspace5/Team15_API_Analysers_RestAssured_BDD/src/test/resources/Features/02UserAsDieticianAndPatientRole_E2EFlow.feature:16)
+Caused by: java.io.FileNotFoundException: .\src\test\resources\Schema\PostPatient\PostUserLogin.json (The system cannot find the file specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at com.github.fge.jackson.JsonLoader.fromFile(JsonLoader.java:165)
+	at io.restassured.module.jsv.JsonSchemaValidator$3.createSchemaInstance(JsonSchemaValidator.java:155)
+	at io.restassured.module.jsv.JsonSchemaValidator$3.createSchemaInstance(JsonSchemaValidator.java:152)
+	at io.restassured.module.jsv.JsonSchemaValidator$JsonSchemaValidatorFactory.create(JsonSchemaValidator.java:284)
+	at io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema(JsonSchemaValidator.java:157)
+	at api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_created_status_with_response_body_and_patient_is_created(UserAsDieticianAndPatientRole_E2E_SD.java:90)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:66)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:149)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:185)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:83)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:219)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Nov 21, 2023 03:36:08 AM</td>
+										<td class='linked' test-id='41'>Then User receives  201 created status with response body and patient is created</td>
+										<td>
+											<textarea disabled class="code-block">io.restassured.module.jsv.JsonSchemaValidationException: java.io.FileNotFoundException: .\src\test\resources\Schema\PostPatient\PostUserLogin.json (The system cannot find the file specified)
+	at io.restassured.module.jsv.JsonSchemaValidator$JsonSchemaValidatorFactory.create(JsonSchemaValidator.java:286)
+	at io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema(JsonSchemaValidator.java:157)
+	at api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_created_status_with_response_body_and_patient_is_created(UserAsDieticianAndPatientRole_E2E_SD.java:90)
+	at ✽.User receives  201 created status with response body and patient is created(file:///C:/Users/tusha/eclipse-workspace/eclipseworkspace5/Team15_API_Analysers_RestAssured_BDD/src/test/resources/Features/02UserAsDieticianAndPatientRole_E2EFlow.feature:16)
+Caused by: java.io.FileNotFoundException: .\src\test\resources\Schema\PostPatient\PostUserLogin.json (The system cannot find the file specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at com.github.fge.jackson.JsonLoader.fromFile(JsonLoader.java:165)
+	at io.restassured.module.jsv.JsonSchemaValidator$3.createSchemaInstance(JsonSchemaValidator.java:155)
+	at io.restassured.module.jsv.JsonSchemaValidator$3.createSchemaInstance(JsonSchemaValidator.java:152)
+	at io.restassured.module.jsv.JsonSchemaValidator$JsonSchemaValidatorFactory.create(JsonSchemaValidator.java:284)
+	at io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema(JsonSchemaValidator.java:157)
+	at api.StepDefinitions.UserAsDieticianAndPatientRole_E2E_SD.user_receives_created_status_with_response_body_and_patient_is_created(UserAsDieticianAndPatientRole_E2E_SD.java:90)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:66)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:149)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:185)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:83)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:219)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Features
+					<div class='panel-lead'>1</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Scenarios
+					<div class='panel-lead'>26</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>78</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Nov 21, 2023 03:35:56 AM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Nov 21, 2023 03:36:15 AM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>00 00 18.754</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>browser</td>
+								<td>chrome</td>
+							</tr>
+							<tr>
+								<td>tester</td>
+								<td>Priyanka</td>
+							</tr>
+							<tr>
+								<td>project</td>
+								<td>LMS_API</td>
+							</tr>
+							<tr>
+								<td>OS</td>
+								<td>windows</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+			<div class='col s6'>
+				<div class='card-panel dashboard-categories'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Skipped</th>
+							<th>Passed %</th>
+						</tr>
+						<tr>
+							<td>@GetRequest_GETPatient_MorbidityDetails_ByPatientID</td>
+							<td>1</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									50%
+							</td>
+						</tr>
+						<tr>
+							<td>@GetRequest_GETLogoutPatient</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@GetRequest_GETLogoutDietician</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@GetRequest_GetAllPatient</td>
+							<td>1</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									50%
+							</td>
+						</tr>
+						<tr>
+							<td>@PostRequest_CreateNewPatient2</td>
+							<td>0</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									0%
+							</td>
+						</tr>
+						<tr>
+							<td>@GetRequest_GETPatient_MorbidityDetails_ByPatientID_PatientRole</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@GetRequest_GETMorbidity_ByTestName_PatientRole</td>
+							<td>0</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									0%
+							</td>
+						</tr>
+						<tr>
+							<td>@GetRequest_GETMorbidity_ByTestName</td>
+							<td>1</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									50%
+							</td>
+						</tr>
+						<tr>
+							<td>@PostRequest_CreateTokenForValidPatient</td>
+							<td>0</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									0%
+							</td>
+						</tr>
+						<tr>
+							<td>@PostRequest_CreateNewPatient</td>
+							<td>0</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									0%
+							</td>
+						</tr>
+						<tr>
+							<td>@GetRequest_GETAllMorbidity_PatientRole</td>
+							<td>0</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									0%
+							</td>
+						</tr>
+						<tr>
+							<td>@GetRequest_GETAllMorbidity</td>
+							<td>1</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									50%
+							</td>
+						</tr>
+						<tr>
+							<td>@GetRequest_GetAllPatient_PatientRole</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@PostRequest_CreateTokenForValidDietician</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@GetRequest_GETPatient_Details_ByFileID_PatientRole</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@DeleteRequest_DeletePatientBypatienID</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@GetRequest_GETPatient_Details_ByFileID</td>
+							<td>1</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									50%
+							</td>
+						</tr>
+						<tr>
+							<td>@PutRequest_UpdatePatient</td>
+							<td>1</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									50%
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 1,
+				passParent: 0,
+				failParent: 1,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				childCount: 26,
+				passChild: 15,
+				failChild: 11,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				grandChildCount: 78,
+				passGrandChild: 67,
+				failGrandChild: 11,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+			};
+			</script>
+		
+		<script>
+			var timeline = {
+			        "User as a Dietician and Patient End to End Flow Feature":17.746
+			};
+		</script>
+		
+		  <script src='http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/js/extent.js' type='text/javascript'></script>
+		
+		
+		<script type='text/javascript'>
+				
+		</script> 
+
+	</body>
+</html>

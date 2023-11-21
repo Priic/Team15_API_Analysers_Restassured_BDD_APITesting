@@ -1,0 +1,1 @@
+{"uuid":"732b89d8-4d49-4cf0-b948-ab33b1be9433","name":"Scenario: User with Patient role and valid credentials should not be able to view all patients records","children":["a927ad38-9bc9-425e-bc78-102786e7a5ac"],"befores":[],"afters":[],"start":1700559547708,"stop":1700559548062}

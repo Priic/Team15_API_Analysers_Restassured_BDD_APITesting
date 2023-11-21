@@ -14,9 +14,16 @@ public class PatientPayload extends restUtils{
 	private String patientId;
 	private String patientInfo;
 	private String patientInfoValue;
+	private String ContactNumber;
 	
 
 	
+	public String getContactNumber() {
+		return ContactNumber;
+	}
+	public void setContactNumber(String contactNumber) {
+		ContactNumber = contactNumber;
+	}
 	public String getPatientInfoValue() {
 		return patientInfoValue;
 	}

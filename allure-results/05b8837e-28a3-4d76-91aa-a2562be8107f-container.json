@@ -1,0 +1,1 @@
+{"uuid":"05b8837e-28a3-4d76-91aa-a2562be8107f","name":"Scenario: User with Dietician role and valid credentials is able to view all patient test reports by patientID","children":["7d5cd26c-e29d-44ff-8c8f-507ae43ff234"],"befores":[],"afters":[],"start":1700559540785,"stop":1700559541367}

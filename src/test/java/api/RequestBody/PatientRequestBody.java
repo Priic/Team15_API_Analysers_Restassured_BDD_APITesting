@@ -11,6 +11,13 @@ public class PatientRequestBody extends restUtils{
 		
 		patientPayload.setPatientInfo(xlUtils.getCellData("PostPatients", 1, 1));
 		patientPayload.setPatientInfoValue(xlUtils.getCellData("PostPatients", 1, 0));
+		return patientPayload;		
+	}
+	
+public static PatientPayload UpdatePatientPutBody() throws IOException {
+		
+		patientPayload.setPatientInfo(xlUtils.getCellData("PutPatients", 1, 1));
+		patientPayload.setPatientInfoValue(xlUtils.getCellData("PutPatients", 1, 0));
 		return patientPayload;
 		
 	}

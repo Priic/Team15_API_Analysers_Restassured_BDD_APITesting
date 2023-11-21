@@ -1,0 +1,1 @@
+{"uuid":"2b991c36-d557-458a-9496-919fb975188a","name":"Scenario: User with Dietician role and valid credentials after logout should not be able to view patients","children":["903bbbb0-91be-42f7-bf11-a0a8122cb638"],"befores":[],"afters":[],"start":1700559543580,"stop":1700559543962}
