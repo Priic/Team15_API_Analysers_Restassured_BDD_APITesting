@@ -22,6 +22,19 @@
 			<version>5.3.1</version>
 			<scope>test</scope>
 		</dependency>
+<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.4.0</version>
+    <scope>test</scope>
+</dependency>
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-testng</artifactId>
+    <version>7.14.0</version>
+</dependency>
 
 		<dependency>
 			<groupId>org.json</groupId>
@@ -156,7 +169,12 @@
 			<artifactId>log4j-api</artifactId>
 			<version>2.19.0</version>
 		</dependency>
-
+<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>2.16.0-rc1</version>
+</dependency>
 
 	</dependencies>
 	

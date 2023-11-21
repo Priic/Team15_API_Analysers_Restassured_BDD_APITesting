@@ -1,16 +1,13 @@
 package api.TestRunner;
-import org.junit.runner.RunWith;
+import org.testng.annotations.Test;
 
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
+import io.cucumber.testng.AbstractTestNGCucumberTests;
 
 
-
-@RunWith(Cucumber.class)
-
-
-@CucumberOptions(features ={"src/test/resources/Features/"}, 
+@CucumberOptions(features ={"src/test/resources/Features/PatientController_Dietician.feature"}, 
 glue = {"api.StepDefinitions"}, 
 
 monochrome = true, 
@@ -20,7 +17,7 @@ plugin = {"pretty",
 		"html:target/cucmberreport.html",
 		"html:target/JUNITHtmlReports/report.html",
 		"junit:target/JUNITReports/reports.xml"})
-
-public class runner {
+@Test
+public class runner extends AbstractTestNGCucumberTests{
 
 }
