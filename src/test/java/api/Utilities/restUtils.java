@@ -26,14 +26,9 @@ public class restUtils {
 	//base class for all global declarations
 		public static ResourceBundle path=ResourceBundle.getBundle("paths"); //creating object and accessing the path properties file
 		public static Logger log = LogManager.getLogger();
-		
-			
 		//public static String url= path.getString("BaseUrl");
 		
-		public static RequestSpecification reqSpecBuilder ;
-		public static ResponseSpecification resSpecBuilder ;
-		public static RequestSpecification request;	
-		public static Response response;
+		
 		public static RequestSpecification requestSpecification() throws FileNotFoundException {
 			
 			if (reqSpecBuilder==null) {
