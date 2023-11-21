@@ -184,5 +184,12 @@ Feature: User as a Dietician and Patient End to End Flow Feature
     When User sends HTTPS delete Request to patient by Id
     Then User receives  200 success status with response body
     
+    @GetRequest_GETLogoutDietician
+  	Scenario: User with Dietician role and valid credentials is able to Logout 
+  	
+    Given User create request for Dietician API endpoint
+    When User sends HTTPS Get Request to logout as Dietician
+    Then User receives  200 success status with response body 	
+    
     
   	

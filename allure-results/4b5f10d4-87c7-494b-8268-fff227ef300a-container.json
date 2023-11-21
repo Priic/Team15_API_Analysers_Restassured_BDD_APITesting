@@ -1,1 +1,0 @@
-{"uuid":"4b5f10d4-87c7-494b-8268-fff227ef300a","name":"Scenario: User with Dietician role and valid credentials after logout should not be able to update new patients","children":["4ef8b6f7-3010-4929-9294-955dec85d88e"],"befores":[],"afters":[],"start":1700559543982,"stop":1700559544641}

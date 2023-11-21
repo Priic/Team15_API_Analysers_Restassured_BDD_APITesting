@@ -1,1 +1,0 @@
-{"uuid":"453018e5-fe52-49c1-8a92-bdd92d64d1bd","name":"Scenario: User with Dietician role and valid credentials after logout should not be able to view all patient morbidity details","children":["dae307ae-8bb2-43d7-8eb0-4c3fc462f6c8"],"befores":[],"afters":[],"start":1700559548080,"stop":1700559548436}

@@ -1,0 +1,1 @@
+{"uuid":"6c5ea1b6-4ec3-4684-b2e9-d209af313f75","name":"Scenario: User with Patient role and valid credentials is able to view all patient test reports by patientID","children":["89262150-c363-48e8-bcce-c233f1e6e0f3"],"befores":[],"afters":[],"start":1700577795335,"stop":1700577795664}

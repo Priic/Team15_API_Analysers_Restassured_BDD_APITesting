@@ -874,3 +874,42 @@
 [INFO ]2023-11-21 03:39:09.749 [main]restUtils-***Dietician Token generated***
 [INFO ]2023-11-21 03:39:09.814 [main]restUtils-***User sends request with BaseURL***
 [INFO ]2023-11-21 03:39:09.817 [main]restUtils-***to delete patient***
+[INFO ]2023-11-21 08:42:56.553 [main]restUtils-***User sends request with BaseURL***
+[INFO ]2023-11-21 08:43:03.181 [main]restUtils-***Dietician Token generated***
+[INFO ]2023-11-21 08:43:04.435 [main]restUtils-***User sends request with BaseURL***
+[INFO ]2023-11-21 08:43:04.451 [main]restUtils-***to Create new patient***
+[INFO ]2023-11-21 08:43:05.861 [main]restUtils-***User sends request with BaseURL***
+[INFO ]2023-11-21 08:43:06.291 [main]restUtils-***to view all patient***
+[INFO ]2023-11-21 08:43:06.347 [main]restUtils-***User sends request with BaseURL***
+[INFO ]2023-11-21 08:43:06.353 [main]restUtils-***view all patient morbidity details***
+[INFO ]2023-11-21 08:43:06.737 [main]restUtils-***User sends request with BaseURL***
+[INFO ]2023-11-21 08:43:06.745 [main]restUtils-***to view all patient morbidity by testname***
+[INFO ]2023-11-21 08:43:07.645 [main]restUtils-***User sends request with BaseURL***
+[INFO ]2023-11-21 08:43:08.133 [main]restUtils-***User sends request with BaseURL***
+[INFO ]2023-11-21 08:43:08.829 [main]restUtils-***User sends request with BaseURL***
+[INFO ]2023-11-21 08:43:09.643 [main]restUtils-***User sends request with BaseURL***
+[INFO ]2023-11-21 08:43:09.643 [main]restUtils-***to delete patient***
+[INFO ]2023-11-21 08:43:10.046 [main]restUtils-***User sends request with BaseURL***
+[INFO ]2023-11-21 08:43:10.054 [main]restUtils-***to Create new patient***
+[INFO ]2023-11-21 08:43:11.137 [main]restUtils-***User sends request with BaseURL***
+[INFO ]2023-11-21 08:43:11.519 [main]restUtils-***User sends request with BaseURL***
+[INFO ]2023-11-21 08:43:11.839 [main]restUtils-***to view all patient***
+[INFO ]2023-11-21 08:43:11.921 [main]restUtils-***User sends request with BaseURL***
+[INFO ]2023-11-21 08:43:12.720 [main]restUtils-***User sends request with BaseURL***
+[INFO ]2023-11-21 08:43:12.726 [main]restUtils-***view all patient morbidity details***
+[INFO ]2023-11-21 08:43:13.125 [main]restUtils-***User sends request with BaseURL***
+[INFO ]2023-11-21 08:43:13.132 [main]restUtils-***to view all patient morbidity by testname***
+[INFO ]2023-11-21 08:43:13.612 [main]restUtils-***User sends request with BaseURL***
+[INFO ]2023-11-21 08:43:13.983 [main]restUtils-***User sends request with BaseURL***
+[INFO ]2023-11-21 08:43:14.742 [main]restUtils-***User sends request with BaseURL***
+[INFO ]2023-11-21 08:43:15.343 [main]restUtils-***User sends request with BaseURL***
+[INFO ]2023-11-21 08:43:15.696 [main]restUtils-***User sends request with BaseURL***
+[INFO ]2023-11-21 08:43:16.362 [main]restUtils-***User sends request with BaseURL***
+[INFO ]2023-11-21 08:43:16.759 [main]restUtils-***User sends request with BaseURL***
+[INFO ]2023-11-21 08:43:17.216 [main]restUtils-***User sends request with BaseURL***
+[INFO ]2023-11-21 08:43:17.624 [main]restUtils-***User sends request with BaseURL***
+[INFO ]2023-11-21 08:43:17.951 [main]restUtils-***User sends request with BaseURL***
+[INFO ]2023-11-21 08:43:18.483 [main]restUtils-***Dietician Token generated***
+[INFO ]2023-11-21 08:43:18.579 [main]restUtils-***User sends request with BaseURL***
+[INFO ]2023-11-21 08:43:18.585 [main]restUtils-***to delete patient***
+[INFO ]2023-11-21 08:43:18.961 [main]restUtils-***User sends request with BaseURL***
