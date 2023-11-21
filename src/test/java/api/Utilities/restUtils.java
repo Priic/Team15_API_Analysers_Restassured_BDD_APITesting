@@ -4,11 +4,14 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.filter.log.RequestLoggingFilter;
@@ -24,15 +27,13 @@ public class restUtils {
 		public static ResourceBundle path=ResourceBundle.getBundle("paths"); //creating object and accessing the path properties file
 		public static Logger log = LogManager.getLogger();
 		
-		public static xlUtils xlUtils=new xlUtils(path.getString("Xlpath"));		
+		public static xlUtils xlUtils=new xlUtils(".\\src\\test\\resources\\Testdata\\Testdata_steffi.xlsx");		
+		//public static String url= path.getString("BaseUrl");
 		
-
 		public static RequestSpecification reqSpecBuilder ;
 		public static ResponseSpecification resSpecBuilder ;
-		public static RequestSpecification request;
-				
-	
-		
+		public static RequestSpecification request;	
+		public static Response response;
 		public static RequestSpecification requestSpecification() throws FileNotFoundException {
 			
 			if (reqSpecBuilder==null) {
